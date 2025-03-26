@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "chedotech-85bbf"
+  },
+  "targets": {
+    "chedotech-85bbf": {
+      "hosting": {
+        "my-leetcode-editor": [
+          "my-leetcode-editor"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
