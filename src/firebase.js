@@ -10,15 +10,15 @@ import {
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDJglACSr4IrotXfSHMH3k3NJvpBucjlh0",
-  authDomain: "chedotech-85bbf.firebaseapp.com",
+  apiKey: "",
+  authDomain: "",
   databaseURL:
-    "https://chedotech-85bbf-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "chedotech-85bbf",
-  storageBucket: "chedotech-85bbf.appspot.com",
-  messagingSenderId: "25684933602",
-  appId: "1:25684933602:web:dec0eb4d1b7949631657bb",
-  measurementId: "G-0JBW8TYGFS",
+    "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: "",
 };
 
 // Initialize Firebase
