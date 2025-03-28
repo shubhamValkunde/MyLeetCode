@@ -1,0 +1,246 @@
+/* src/styles.css */
+
+/* CSS Variables */
+:root {
+  --bg-color: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+  --button-bg: #4f46e5;
+  --button-hover: #4338ca;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --example-bg: #f9fafb;
+  --example-border: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1f2937;
+    --card-bg: #374151;
+    --text-color: #f9fafb;
+    --input-bg: #4b5563;
+    --input-border: #6b7280;
+    --button-bg: #6366f1;
+    --button-hover: #4f46e5;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --example-bg: #4b5563;
+    --example-border: #6b7280;
+  }
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top to avoid vertical centering */
+}
+
+/* Problem Form Container */
+.problem-form-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1280px; /* Full width for laptop screens */
+}
+
+/* Card Component */
+.card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--example-border);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 1.5rem; /* Reduced padding */
+}
+
+/* Form Title */
+.form-title {
+  font-size: 2rem; /* Slightly smaller title */
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem; /* Reduced margin */
+  color: var(--text-color);
+}
+
+/* Labels */
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem; /* Reduced spacing */
+  color: var(--text-color);
+}
+
+/* Input Component */
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+/* Textarea Component */
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textarea:focus {
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+.textarea.code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.875rem;
+  height: 80px; /* Reduced height for code fields */
+}
+
+/* Select Component (for Difficulty) */
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select:focus {
+  border-color: var(--button-bg);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+/* Button Component */
+.button {
+  padding: 0.5rem 1rem;
+  background: var(--button-bg);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  background: var(--button-hover);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+.button.add-example {
+  background: #22c55e;
+}
+
+.button.add-example:hover {
+  background: #16a34a;
+}
+
+.button.remove-example {
+  background: #ef4444;
+}
+
+.button.remove-example:hover {
+  background: #dc2626;
+}
+
+.button.submit {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-top: 1rem; /* Reduced margin */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button.submit:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Example Section */
+.example-card {
+  background: var(--example-bg);
+  border: 1px solid var(--example-border);
+  border-radius: 0.5rem;
+  padding: 1rem; /* Reduced padding */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns for laptop screens */
+  gap: 1rem;
+}
+
+/* Sample Code Section */
+.sample-code-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Four columns to fit all code blocks */
+  gap: 1rem;
+}
+
+/* Section Headings */
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem; /* Reduced spacing */
+  color: var(--text-color);
+}
+
+/* Constraints */
+.constraints {
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+/* Spacing */
+.mb-6 {
+  margin-bottom: 1rem; /* Reduced spacing */
+}
+
+.mt-4 {
+  margin-top: 0.5rem; /* Reduced spacing */
+}
